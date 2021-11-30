@@ -8,6 +8,6 @@ import retrofit2.Response
 object Source {
 
     interface Remote {
-        suspend fun fetchCharacters(): Response<BaseRemoteEntity<CharactersEntity>>
+        suspend fun fetchCharacters(limit : Int,offset : Int): Response<BaseRemoteEntity<CharactersEntity>>
     }
 }

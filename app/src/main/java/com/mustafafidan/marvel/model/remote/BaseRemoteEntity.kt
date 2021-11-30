@@ -11,6 +11,8 @@ data class BaseRemoteEntity<T>(
     val attributionText: String,
     @Json(name = "code")
     val code: Int,
+    @Json(name = "status")
+    val status: String?,
     @Json(name = "copyright")
     val copyright: String,
     @Json(name = "data")

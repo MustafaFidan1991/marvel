@@ -9,5 +9,7 @@ data class Item(
     @Json(name = "name")
     val name: String,
     @Json(name = "resourceURI")
-    val resourceURI: String
+    val resourceURI: String,
+    @Json(name = "type")
+    val type: String ?= null
 )

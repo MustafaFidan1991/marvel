@@ -1,5 +1,6 @@
 package com.mustafafidan.marvel.di
 
+import android.content.Context
 import com.mustafafidan.marvel.constants.BASE_URL
 import com.mustafafidan.marvel.network.MarvelService
 import com.squareup.moshi.Moshi
@@ -8,6 +9,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -16,6 +18,11 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 @Module
 @InstallIn(ViewModelComponent::class)
 object NetworkModule {
+
+    @Provides
+    fun provideContext(@ApplicationContext appContext: Context) : Context{
+        return appContext
+    }
 
     @Provides
     fun provideMarvelService(moshiConverterFactory: MoshiConverterFactory): MarvelService {

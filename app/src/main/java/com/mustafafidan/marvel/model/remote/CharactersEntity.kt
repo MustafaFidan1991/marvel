@@ -16,4 +16,4 @@ data class CharactersEntity(
     val results: List<Result>,
     @Json(name = "total")
     val total: Int
-)
+) : BaseEntity()

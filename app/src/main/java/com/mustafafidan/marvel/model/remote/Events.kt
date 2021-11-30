@@ -11,7 +11,7 @@ data class Events(
     @Json(name = "collectionURI")
     val collectionURI: String,
     @Json(name = "items")
-    val items: List<ItemX>,
+    val items: List<Item>,
     @Json(name = "returned")
     val returned: Int
 )
