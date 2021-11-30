@@ -5,7 +5,7 @@ import com.mustafafidan.marvel.model.remote.CharactersEntity
 import retrofit2.Response
 
 
-object Source {
+object CharactersSource {
 
     interface Remote {
         suspend fun fetchCharacters(limit : Int,offset : Int): Response<BaseRemoteEntity<CharactersEntity>>

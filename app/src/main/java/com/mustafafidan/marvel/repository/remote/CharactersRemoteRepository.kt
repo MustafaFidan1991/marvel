@@ -8,6 +8,6 @@ import javax.inject.Inject
 
 class CharactersRemoteRepository@Inject constructor(
     private val marvelService: MarvelService
-) : Source.Remote {
+) : CharactersSource.Remote {
     override suspend fun fetchCharacters(limit : Int,offset : Int): Response<BaseRemoteEntity<CharactersEntity>> = marvelService.getCharacters(limit,offset)
 }

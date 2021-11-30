@@ -2,6 +2,7 @@ package com.mustafafidan.marvel.common
 
 import android.content.Context
 import android.text.format.DateFormat
+import com.mustafafidan.marvel.constants.DATE_FORMAT
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.text.ParseException
@@ -9,7 +10,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 fun String.getFormattedDate(context : Context) : String{
-    val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
+    val sdf = SimpleDateFormat(DATE_FORMAT, Locale.getDefault())
     var date : Date?= null;
     try {
         date = sdf.parse(this)

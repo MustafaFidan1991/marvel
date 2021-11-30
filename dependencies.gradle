@@ -2,6 +2,7 @@ ext {
 
     versions = [
             hiltVersion              : "2.38.1",
+            hiltExtensionVersion     : "1.0.0",
             coroutinesVersion        : "1.5.2",
             lifecycleVersion         : "2.4.0",
             multidexVersion          : "2.0.1",
@@ -15,6 +16,7 @@ ext {
 
     libraries = [
             hilt              : "com.google.dagger:hilt-android:${versions.hiltVersion}",
+            hiltExtension     : "androidx.hilt:hilt-*:${versions.hiltExtensionVersion}",
             coroutines        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutinesVersion}",
             liveDataKTX       : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycleVersion}",
             multidex          : "androidx.multidex:multidex:${versions.multidexVersion}",

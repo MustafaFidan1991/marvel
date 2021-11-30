@@ -13,6 +13,7 @@ import com.mustafafidan.marvel.databinding.FragmentHomeBinding
 import com.mustafafidan.marvel.ui.home.adapter.CharactersAdapter
 import com.mustafafidan.marvel.ui.home.adapter.CharactersLoadingAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -42,6 +43,7 @@ class HomeFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener {
     private fun setupUi(){
         binding.recyclerView.setHasFixedSize(true)
         binding.swipeRefreshLayout.isRefreshing = true
+
     }
 
     private fun setRecyclerAdapter(){
