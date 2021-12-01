@@ -18,9 +18,11 @@ class FetchDetailUseCase @Inject constructor(
 ){
     private val comicLimit = 10
     suspend fun fetchData(transform : (Resource<DetailUiModel>) -> Unit) {
-        val characterUiModel = savedStateHandle.get<CharacterUiModel>("character")!!
-        repository.fetchComics(characterUiModel.id.toString(),comicLimit).collect {
-            transform(it.mapOnData { mapper.mapFromResponse(it) })
+        val characterUiModel = savedStateHandle.get<CharacterUiModel>("character")
+        characterUiModel?.let {
+            repository.fetchComics(characterUiModel.id.toString(),comicLimit).collect {
+                transform(it.mapOnData { mapper.mapFromResponse(it) })
+            }
         }
     }
 }

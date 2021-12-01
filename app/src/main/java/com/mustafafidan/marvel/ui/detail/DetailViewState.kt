@@ -2,17 +2,14 @@ package com.mustafafidan.marvel.ui.detail
 
 import android.content.Context
 import android.view.View
-import androidx.core.os.bundleOf
 import androidx.fragment.app.findFragment
-import androidx.navigation.fragment.findNavController
 import com.mustafafidan.marvel.R
-import com.mustafafidan.marvel.errorhandling.Resource
-import com.mustafafidan.marvel.errorhandling.Success
 import com.mustafafidan.marvel.errorhandling.Error
 import com.mustafafidan.marvel.errorhandling.Loading
+import com.mustafafidan.marvel.errorhandling.Resource
+import com.mustafafidan.marvel.errorhandling.Success
 import com.mustafafidan.marvel.model.local.DetailUiModel
 import com.mustafafidan.marvel.ui.detail.adapter.ComicAdapter
-import com.mustafafidan.marvel.ui.home.HomeFragment
 
 class DetailViewState(
     private val resource: Resource<*>,
